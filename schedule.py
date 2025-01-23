@@ -57,7 +57,7 @@ def _(category, date, df, mo, pl):
         _df.filter(pl.col("Category") == category.value) if category.value else _df
     )
     _df = _df.filter(pl.col("Date") == date.value) if date.value else _df
-    mo.ui.table(_df, page_size=40)
+    mo.ui.table(_df, page_size=40, selection=None)
     return
 
 
